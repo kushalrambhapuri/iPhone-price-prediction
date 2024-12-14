@@ -1,11 +1,35 @@
-# iphone_price_prediction
-Now you can predict the next iphone price and it may be cost you and arm and a leg with just 6 lines of python code!!
-I have done it by using Pycharm which is an python code editor.
-In the first I have written **pip install pandas** in the terminal.
-In the first of the codeI have imported pandas.
-And then I have writte from sklearn.linear_model import LinearRegression.
-Then I have created a variable called data and entered the value as pandas.read_csv('iphone_price.csv').
-Then I have created another variable called model and enterted the value as Linear Regression().
-Then I have written model.fit(data[['version']], data[['price']]).
-Then to print the prediction of the iphone price I have written print(model.predict([[13]])).
-And now you are ready for the prediction of the next iphone!!
+# iPhone Price Prediction
+Now you can predict the price of the next iPhone—though it might cost you an arm and a leg—all with just 6 lines of Python code!
+I created this prediction tool using PyCharm, a popular Python code editor. Follow the steps below to build your own iPhone price predictor:
+Prerequisites
+Python Installed: Ensure Python is installed on your system.
+Install Pandas: Open the terminal and run the following command:
+pip install pandas  
+Pandas is essential for handling the data needed to make accurate predictions.
+Install scikit-learn: Install the library for machine learning:
+pip install scikit-learn  
+Code Explanation
+Importing Libraries: Start by importing the necessary libraries:
+
+import pandas as pd  
+from sklearn.linear_model import LinearRegression  
+Load Data: Load your iPhone price data into a Pandas DataFrame:
+
+data = pd.read_csv('iphone_price.csv')  
+Ensure you have a CSV file (iphone_price.csv) containing historical iPhone versions and their corresponding prices.
+
+Initialize the Model: Create a LinearRegression model:
+model = LinearRegression()  
+Train the Model: Fit the model to the dataset using iPhone versions and prices:
+
+model.fit(data[['version']], data[['price']])  
+Make Predictions: Predict the price of the next iPhone version (e.g., version 13):
+
+print(model.predict([[13]]))  
+Example Output
+If your dataset is accurate, the script will output the predicted price for the iPhone version you specify.
+
+Notes
+Ensure your iphone_price.csv file is in the same directory as your script and contains columns version and price.
+This is a basic example of linear regression for educational purposes. For more accurate predictions, consider adding more features or using advanced models.
+And that’s it! Your iPhone price predictor is ready to forecast the cost of the next iPhone.
